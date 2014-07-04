@@ -25,7 +25,7 @@ func nameOfClass(classType: AnyClass) -> String {
         }
         // create a number from the ciphers
         if let numberOfCharactersOfModuleName = ciphersForModule.toInt() {
-            // ciphers contains a valid number, so skip the module name minus 1 because we already read one character f the module name
+            // ciphers contains a valid number, so skip the module name minus 1 because we already read one character of the module name
             index += numberOfCharactersOfModuleName - 1
             var ciphersForClass = String()
             while index < characters.count {

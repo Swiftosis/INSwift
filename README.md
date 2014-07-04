@@ -2,8 +2,10 @@
 
 Some little extensions and code snippets for Apple's Swift language.
 
+## Features
+
 ### nameOfClass
-- Returns the name of a Class as a string. This method is a counterpart for Objective-C's NSStringFromClass() written in swift and compatible with every class in swift (except for those with special characters in the name).
+- Returns the name of a class as a String. This method is a counterpart for Objective-C's NSStringFromClass() written in swift and compatible with every class in swift (except for those with special characters like umlauts in the name).
 
 
 ## Examples

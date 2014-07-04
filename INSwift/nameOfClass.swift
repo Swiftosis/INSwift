@@ -23,10 +23,10 @@
 import Foundation
 
 /**
-    Returns the name of a Class as a string.
+    Returns the name of a class as a string.
 
-    This method is a counterpart for Objective-C's NSStringFromClass() written in swift and compatible with every class in swift.
-    Make sure not to call this method with a struct or any other type apart from a class, i.e. calling this method with String will result in an error.
+    This method is a counterpart for Objective-C's `NSStringFromClass()` written in swift and compatible with every class in swift.
+    Make sure not to call this method with a struct or any other type apart from a class, i.e. calling this method with `String` will result in an error.
     
         let className = nameOfClass(MyClass)
         let myObject = MyClass()
@@ -42,7 +42,7 @@ import Foundation
     In this case the name already has the valid form and is returned without further string processing.
 
     @param classType: A class type.
-    @return The classes' name as a String object.
+    @return The classes' name as a String.
 */
 func nameOfClass(classType: AnyClass) -> String {
     let stringOfClassType: String = NSStringFromClass(classType)
@@ -67,7 +67,7 @@ func nameOfClass(classType: AnyClass) -> String {
         }
         // create a number from the ciphers
         if let numberOfCharactersOfModuleName = ciphersForModule.toInt() {
-            // ciphers contains a valid number, so skip the module name minus 1 because we already read one character f the module name
+            // ciphers contains a valid number, so skip the module name minus 1 because we already read one character of the module name
             index += numberOfCharactersOfModuleName - 1
             var ciphersForClass = String()
             while index < characters.count {
