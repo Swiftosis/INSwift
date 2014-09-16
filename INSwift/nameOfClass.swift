@@ -57,9 +57,9 @@ func nameOfClass(classType: AnyClass) -> String {
         var index = countElements(swiftClassPrefix)
         while index < characters.count {
             let character = characters[index++]
-            if String(character).toInt() {
+            if String(character).toInt() != nil {
                 // character is a cipher
-                ciphersForModule += character
+                ciphersForModule.append(character)
             } else {
                 // no cipher, module name begins
                 break
@@ -72,9 +72,9 @@ func nameOfClass(classType: AnyClass) -> String {
             var ciphersForClass = String()
             while index < characters.count {
                 let character = characters[index++]
-                if String(character).toInt() {
+                if String(character).toInt() != nil {
                     // character is a cipher
-                    ciphersForClass += character
+                    ciphersForClass.append(character)
                 } else {
                     // no cipher, class name begins
                     break
